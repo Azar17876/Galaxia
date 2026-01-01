@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <div id="panel">
+        <div class="wrapper">
+            <h1 class="welcome">Welcome to Galaxia</h1>
+            <div class="login-container">
+                <!-- Single form for login -->
+                <form action="/login" method="post">
+                    <!-- Username input with icon -->
+                    <div class="input-container">
+                        <input name="username" type="text" placeholder="Username/Email" required>
+                        <i class="fas fa-user icon"></i>
+                    </div>
+                    
+                    <!-- Password input with icon -->
+                    <div class="input-container">
+                        <input name="password" type="password" placeholder="Password" required>
+                        <i class="fas fa-lock icon"></i>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button class="login-btn">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
